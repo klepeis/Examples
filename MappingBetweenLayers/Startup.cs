@@ -1,5 +1,6 @@
 ﻿using MappingBetweenLayers.Core.SampleDomain.BusinessObjects;
 using MappingBetweenLayers.Core.SampleDomain.DataAccessObjects;
+using MappingBetweenLayers.Infrastructure.DbContexts;
 using MappingBetweenLayers.Services.External;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -22,6 +23,10 @@ namespace MappingBetweenLayers
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<SampleDbContext>(options => 
+            {
+            });
+
             services.AddHttpClient<IExternalService, ExternalService>(options =>
             {
                 options.BaseAddress = new Uri("<InsertBaseAddressHere>");
