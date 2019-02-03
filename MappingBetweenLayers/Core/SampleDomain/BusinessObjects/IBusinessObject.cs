@@ -1,11 +1,11 @@
-﻿namespace MappingBetweenLayers.Core.SampleDomain.BusinessObjects
+﻿using MappingBetweenLayers.Models.Controllers.Response;
+
+namespace MappingBetweenLayers.Core.SampleDomain.BusinessObjects
 {
     public interface IBusinessObject
     {
         void GetDataFromDatabase();
-
-        void GetDataFromExternalSource();
-
+        GetExternalDataResponse GetDataFromExternalSource();
         void GetDataFromDatabaseAndExternalSource();
     }
 }

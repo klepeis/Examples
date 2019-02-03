@@ -6,7 +6,7 @@ namespace MappingBetweenLayers.Infrastructure.DbContexts
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
+            optionsBuilder.UseInMemoryDatabase("SampleInMemoryDatabase");
         }
     }
 }

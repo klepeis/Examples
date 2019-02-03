@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Core\SampleDomain\BusinessObjects\Models\Response\" />
-    <Folder Include="Core\SampleDomain\DataAccessObjects\Models\Response\" />
+    <Folder Include="Core\SampleDomain\Models\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

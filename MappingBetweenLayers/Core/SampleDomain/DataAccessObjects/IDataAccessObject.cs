@@ -1,11 +1,11 @@
-﻿namespace MappingBetweenLayers.Core.SampleDomain.DataAccessObjects
+﻿using MappingBetweenLayers.Models;
+
+namespace MappingBetweenLayers.Core.SampleDomain.DataAccessObjects
 {
     public interface IDataAccessObject
     {
         void GetDataFromDatabase();
-
-        void GetDataFromExternalSource();
-
+        IGetExternalDataResponse GetDataFromExternalSource();
         void GetDataFromDatabaseAndExternalSource();
     }
 }

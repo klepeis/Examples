@@ -1,5 +1,7 @@
 ﻿using MappingBetweenLayers.Infrastructure.DbContexts;
+using MappingBetweenLayers.Models;
 using MappingBetweenLayers.Services.External;
+using MappingBetweenLayers.Services.External.Models.Responses;
 using System;
 
 namespace MappingBetweenLayers.Core.SampleDomain.DataAccessObjects
@@ -20,12 +22,13 @@ namespace MappingBetweenLayers.Core.SampleDomain.DataAccessObjects
             throw new NotImplementedException();
         }
 
-        public void GetDataFromDatabaseAndExternalSource()
+        public IGetExternalDataResponse GetDataFromExternalSource()
         {
-            throw new NotImplementedException();
+            GetExternalDataResponse returnValue = _externalService.GetExternalData();
+            return returnValue;
         }
 
-        public void GetDataFromExternalSource()
+        public void GetDataFromDatabaseAndExternalSource()
         {
             throw new NotImplementedException();
         }
